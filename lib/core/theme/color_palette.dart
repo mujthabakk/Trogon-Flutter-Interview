@@ -18,4 +18,5 @@ class AppColorPalettes {
   static const lightpurple = Color(0xFFAE52B5);
   static const green = Color(0xFF4CAF50);
   static const bisque = Color(0xFF553283);
+  static const darkyellow = Color(0xFFF6B647);
 }

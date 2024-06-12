@@ -4,17 +4,14 @@ import 'package:rogonfluttertask/core/theme/light_theme.dart';
 import 'package:rogonfluttertask/view/pages/home_page.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ProviderScope(child: MainApp()));
 }
 
 class MainApp extends ConsumerWidget {
   const MainApp({super.key});
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
-    return  MaterialApp(
-      theme: ref.watch(lightThemeProvider),
-      home: HomePage()
-    );
+  Widget build(BuildContext context, WidgetRef ref) {
+    return MaterialApp(theme: ref.watch(lightThemeProvider), home: const HomePage());
   }
 }

@@ -8,7 +8,7 @@ part 'light_theme.g.dart';
 
 final _lighttheme = ThemeData(
     brightness: Brightness.light,
-    scaffoldBackgroundColor: AppColorPalettes.grey100,
+    scaffoldBackgroundColor: AppColorPalettes.white500,
     appBarTheme: const AppBarTheme(backgroundColor: AppColorPalettes.grey100),
     extensions: [
       //AppColorExtension

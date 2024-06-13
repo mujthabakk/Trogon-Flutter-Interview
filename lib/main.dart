@@ -12,6 +12,9 @@ class MainApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return MaterialApp(theme: ref.watch(lightThemeProvider), home: const HomePage());
+    return MaterialApp(
+      theme: ref.watch(lightThemeProvider),
+      home: const HomePage(),
+    );
   }
 }

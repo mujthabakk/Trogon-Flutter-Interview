@@ -3,6 +3,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:rogonfluttertask/core/theme/color_palette.dart';
 import 'package:rogonfluttertask/core/theme/extensions/app_color_extension.dart';
 import 'package:rogonfluttertask/core/theme/extensions/app_typography_extension.dart';
+import 'package:rogonfluttertask/core/theme/extensions/space_extension.dart';
 
 part 'light_theme.g.dart';
 
@@ -25,6 +26,8 @@ final _lighttheme = ThemeData(
         iconButtonIcon: AppColorPalettes.purple1,
       ),
       //AppSpaceExtension
+      AppSpaceExtension.fromBaseSpace(8),
+
       //AppTypographyExtension
       AppTypographyExtension(
         body: const TextStyle(

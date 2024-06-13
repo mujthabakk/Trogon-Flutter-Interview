@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppColorPalettes {
   static const white500 = Color(0xFFFFFFFF);
+  static const white200 = Color(0xFFF2E8F5);
   static const purple1 = Color(0xFF512E7E);
   static const purple2 = Color(0xFFA073DA);
   static const darkpurple = Color(0xFF512E7E);
@@ -14,6 +15,7 @@ class AppColorPalettes {
   static const blue1 = Color(0xFF24AED2);
   static const blue2 = Color(0xFF7BC9DD);
   static const beige = Color(0xFFF5C589);
+  static const beige100 = Color(0xFFFBF4DA);
   static const darkbeige = Color(0xFFF5C589);
   static const lightorange = Color(0xFFFD5F3C);
   static const lightpurple = Color(0xFFAE52B5);

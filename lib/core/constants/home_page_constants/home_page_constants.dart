@@ -1,6 +1,6 @@
 class HomePageConstants {
-  static const  morningTxt = "Hi Good Morning !";
- static const nameTxt = "John";
+  static const morningTxt = "Hi Good Morning !";
+  static const nameTxt = "John";
   static const selectedTxt = "Selected Course";
   static const montessoriText = "Montessori";
   static const changeTxt = "Change";

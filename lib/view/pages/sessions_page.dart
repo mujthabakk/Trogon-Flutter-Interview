@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rogonfluttertask/core/theme/color_palette.dart';
 import 'package:rogonfluttertask/core/theme/extensions/app_theme.dart';
-import 'package:rogonfluttertask/view/pages/course_page.dart';
+import 'package:rogonfluttertask/view/widgets/couse_page_widget/lesson_card_widet.dart';
+import 'package:rogonfluttertask/view/widgets/session_page_widget/custom_button.dart';
+import 'package:rogonfluttertask/view/widgets/session_page_widget/icon_widget.dart';
+import 'package:rogonfluttertask/view/widgets/session_page_widget/whatsapp_icon.dart';
 
 class SessionsPage extends StatelessWidget {
   const SessionsPage({super.key});
@@ -80,7 +82,7 @@ class SessionsPage extends StatelessWidget {
                     child: ListView.builder(
                       shrinkWrap: true,
                       itemCount: 12,
-                      itemBuilder: (context, index) => LessonCard(),
+                      itemBuilder: (context, index) => const LessonCard(),
                     ),
                   )
                 ],
@@ -90,96 +92,5 @@ class SessionsPage extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class Iconswidget extends StatelessWidget {
-  const Iconswidget({
-    super.key,
-    required this.icon,
-  });
-  final IconData icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
-          border: Border.all(
-            color: AppColorPalettes.grey100,
-            width: 2,
-          )),
-      child: Center(
-        child: Icon(icon),
-      ),
-    );
-  }
-}
-
-class WhatsAppIcon extends StatelessWidget {
-  const WhatsAppIcon({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(100),
-        border: Border.all(
-          color: AppColorPalettes.grey100,
-          width: 2,
-        ),
-      ),
-      child: Center(
-        child: Image.asset(
-          "assets/image/whatsapp-img.png",
-          width: 20,
-          height: 20,
-          color: Colors.black,
-        ),
-      ),
-    );
-  }
-}
-
-//oiuytfghukol;kjhgfdgh
-class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.grey.withOpacity(0.2)),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(6),
-          child: Row(
-            children: [
-              Container(
-                  width: 45,
-                  height: 45,
-                  decoration: BoxDecoration(
-                      color: Colors.amber, shape: BoxShape.circle),
-                  child: Image.asset(
-                    "assets/image/exam-img.png",
-                    width: 40,
-                    height: 40,
-                  )),
-              const Padding(
-                padding: EdgeInsets.only(right: 20),
-                child: Text("White Critically"),
-              )
-            ],
-          ),
-        ));
   }
 }

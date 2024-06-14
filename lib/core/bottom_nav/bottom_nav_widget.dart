@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rogonfluttertask/core/bottom_nav/animated_bottom_nav/animated_bottom_nav_bar.dart';
 import 'package:rogonfluttertask/core/constants/home_page_constants/bottom_nav.dart';
+import 'package:rogonfluttertask/core/theme/color_palette.dart';
 import 'package:rogonfluttertask/core/theme/extensions/app_theme.dart';
 
 class BottomNavWidget extends ConsumerWidget {
@@ -46,16 +47,20 @@ class BottomNavWidget extends ConsumerWidget {
           onPressed: () {
             //add product
           },
-          backgroundColor: context.colors.primary,
+          backgroundColor: AppColorPalettes.darkpurple,
           child: Icon(
-            Icons.add,
-            color: context.colors.btnText,
+            Icons.emoji_events,
+            color: AppColorPalettes.yellow1,
           ),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(
-        backgroundColor: context.colors.appBarBackground,//vGDCKHDCBIYEW IFKVJYVU
+        shadow: const BoxShadow(
+          blurRadius: 8,
+          color: AppColorPalettes.black,
+        ),
+        backgroundColor: AppColorPalettes.white500, //vGDCKHDCBIYEW IFKVJYVU
         height: context.spaces.space_800,
         onTap: (int index) {
           ref.watch(bottomPageIndexProvider.notifier).state = index;

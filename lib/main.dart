@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rogonfluttertask/core/bottom_nav/bottom_nav_widget.dart';
 import 'package:rogonfluttertask/core/theme/light_theme.dart';
-import 'package:rogonfluttertask/view/pages/course_page.dart';
 import 'package:rogonfluttertask/view/pages/home_page.dart';
-import 'package:rogonfluttertask/view/pages/sessions_page.dart';
 
 void main() {
   runApp(const ProviderScope(child: MainApp()));
@@ -17,7 +15,7 @@ class MainApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       theme: ref.watch(lightThemeProvider),
-      home: const BottomNavWidget(),
+      home: const HomePage(),
     );
   }
 }

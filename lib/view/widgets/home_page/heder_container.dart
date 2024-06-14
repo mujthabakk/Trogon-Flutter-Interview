@@ -1,17 +1,24 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:rogonfluttertask/core/constants/home_page_constants/home_page_constants.dart';
 import 'package:rogonfluttertask/core/constants/home_page_constants/home_page_img.dart';
 import 'package:rogonfluttertask/core/theme/color_palette.dart';
 import 'package:rogonfluttertask/core/theme/extensions/app_theme.dart';
+import 'package:rogonfluttertask/service/my_cource_data_service.dart';
 
-class HeadContainer extends StatelessWidget {
+class HeadContainer extends ConsumerWidget {
   const HeadContainer({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final asyncData = ref.watch(getUserProvider);
+    // log(asyncData.value?.contactEmail.toString());
+
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(

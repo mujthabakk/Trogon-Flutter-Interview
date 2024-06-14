@@ -151,7 +151,8 @@ class AnimatedBottomNavigationBar extends StatefulWidget {
       this.backgroundGradient,
       this.blurEffect = false,
       this.blurFilter,
-      this.scaleFactor = 1.0, this.widgets})
+      this.scaleFactor = 1.0,
+      this.widgets})
       : assert(widgets != null || itemCount != null),
         assert(
           ((itemCount ?? widgets!.length) >= 2) &&

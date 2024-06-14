@@ -12,6 +12,7 @@ class Data with _$Data {
     Userdata? userdata,
     List<Subject>? subjects,
     @JsonKey(name: 'pyq_exams') List<dynamic>? pyqExams,
+    // ignore: invalid_annotation_target
     @JsonKey(name: 'upcoming_exams') List<dynamic>? upcomingExams,
     String? syllabus,
     @JsonKey(name: 'practice_link') String? practiceLink,

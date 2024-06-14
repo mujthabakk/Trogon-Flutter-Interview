@@ -9,8 +9,7 @@ class HomePageConstants {
   static const materialsTxt = "Materials";
   static const coursesTxt = "Courses";
   static const seeAllTxt = "See All";
-  static const ktettTxt = "KTET";
-  static const levelxTxt = "LP/UP/HST";
+
   static const neetTxt = "NET";
   static const montessoriTxt = "Montessori";
   static const crashTxt = "Crash Cour";
@@ -20,4 +19,11 @@ class HomePageConstants {
   static const examMathsTxt = "Exam 102 - Maths ";
   static const questionsTxt = "10 Questions  120 mins";
   static const attemptTxt = "Attempt Now";
+  static const text1 = ["KTET", "LP/UP/HST", "SET"];
+
+  static const text2 = [
+    "NET",
+    "Montessori",
+    "Crash Cour",
+  ];
 }

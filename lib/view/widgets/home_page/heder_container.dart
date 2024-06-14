@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,18 +5,23 @@ import 'package:rogonfluttertask/core/constants/home_page_constants/home_page_co
 import 'package:rogonfluttertask/core/constants/home_page_constants/home_page_img.dart';
 import 'package:rogonfluttertask/core/theme/color_palette.dart';
 import 'package:rogonfluttertask/core/theme/extensions/app_theme.dart';
-import 'package:rogonfluttertask/service/my_cource_data_service.dart';
 
 class HeadContainer extends ConsumerWidget {
   const HeadContainer({
     super.key,
+    required this.userName,
+    required this.image,
+    required this.courseName,
+    required this.coins,
   });
+
+  final String userName;
+  final String image;
+  final String courseName;
+  final int coins;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final asyncData = ref.watch(getUserProvider);
-    // log(asyncData.value?.contactEmail.toString());
-
     return Container(
       width: double.infinity,
       decoration: const BoxDecoration(
@@ -47,7 +50,7 @@ class HeadContainer extends ConsumerWidget {
                           style: context.typography.h2.copyWith(
                             color: AppColorPalettes.white500,
                           )),
-                      Text(HomePageConstants.nameTxt,
+                      Text(userName,
                           style: context.typography.h2.copyWith(
                             color: AppColorPalettes.white500,
                           )),
@@ -63,7 +66,7 @@ class HeadContainer extends ConsumerWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(1.0),
-                        child: Text("10",
+                        child: Text(coins.toString(),
                             style: context.typography.h3.copyWith(
                                 color: AppColorPalettes.darkyellow,
                                 fontWeight: FontWeight.w800)),
@@ -78,13 +81,11 @@ class HeadContainer extends ConsumerWidget {
                     ],
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(left: 8),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
                   child: CircleAvatar(
                     radius: 30,
-                    backgroundImage: NetworkImage(
-                      "https://s3-alpha-sig.figma.com/img/34ed/061c/848cf485f477fc5be8fc2c06e8fa79e8?Expires=1719187200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=E73Z0Dp6a6LFNsZrM5pQZNLwBtzCBnKY0lfRTP0E5ADaOfYyuvyPX0zTvv8xWiITQTuYvli9kx-lOnx3~ynKHHpPskzDC6yYJ3TpNnK89k~sVeDUrEw0CvUPvVGX7xRWYcieTGhn4ASvYm5OWLL3cfCZpzsPG0zRx27~jvXGD4d3ZUV51KwSWxEXzhLKxFpyeKLfmnPcBS~8IOmWJd0eMPIkVp6dPEAQsjbL0P~t6gyNObdaYw97~ziiZuTBFzuUCRnCXgL2Sapxzt1b4NhTwhgRTcmF-2OcDpwGw-~2fKZZj1h-9kJ1GJU~pbnAsNkraK6AdcYJfS96c6rAgXr7Zg__",
-                    ),
+                    backgroundImage: NetworkImage(image),
                   ),
                 ),
               ],
@@ -109,7 +110,7 @@ class HeadContainer extends ConsumerWidget {
                                 fontWeight: FontWeight.w300, fontSize: 16),
                           ),
                           Text(
-                            HomePageConstants.materialsTxt,
+                            courseName,
                             style: context.typography.h2Bold.copyWith(),
                           )
                         ],

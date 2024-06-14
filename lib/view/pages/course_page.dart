@@ -10,19 +10,14 @@ class CoursePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const HederCoursePageWIdget(),
-            const UpgradeWidget(),
-            const WhatsAppWidget(),
-            SizedBox(
-                child: ListView.builder(
-              itemCount: 3,
-              shrinkWrap: true,
-              itemBuilder: (context, index) => const LessonCard(),
-            ))
+            HederCoursePageWIdget(),
+            UpgradeWidget(),
+            WhatsAppWidget(),
+            LessonCard()
           ],
         ),
       ),

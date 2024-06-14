@@ -28,11 +28,11 @@ class BottomNavConstants {
     Image.asset('assets/icons/ic_profile-fill.png'),
   ];
 
-  final List<Widget> pages = [
+  final List<Widget> pages = const [
     HomePage(),
     CoursePage(),
     SessionsPage(),
-    Container(),
+    SizedBox()
     // ChatListPage(),
     // FavoritesPage(),
     // ProfilePage()

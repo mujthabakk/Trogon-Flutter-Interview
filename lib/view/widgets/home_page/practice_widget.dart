@@ -1,9 +1,13 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:rogonfluttertask/core/theme/color_palette.dart';
 import 'package:rogonfluttertask/core/theme/extensions/app_theme.dart';
 
 class PracticeCard extends StatelessWidget {
-  const PracticeCard({super.key});
+  const PracticeCard({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

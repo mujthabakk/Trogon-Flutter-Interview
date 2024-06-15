@@ -24,27 +24,8 @@ class LessonCard extends ConsumerWidget {
                 ),
                 child: Row(
                   children: [
-                    // Placeholder for the image
-                    Container(
-                      width: 60,
-                      height: 60,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(data.data?[index].title ?? '')),
-                        color: Colors.grey.shade300,
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      // child: Center(
-                      //   // child: Text(
-                      //   //   'Image',
-                      //   //   style: TextStyle(
-                      //   //     color: Colors.black.withOpacity(0.6),
-                      //   //   ),
-                      //   // ),
-                      // ),
-                    ),
+                  
                     const SizedBox(width: 16),
-                    // Text content
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

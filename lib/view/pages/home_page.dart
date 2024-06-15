@@ -150,7 +150,7 @@ class HomePage extends ConsumerWidget {
                   onPressed: () {
                     ref.invalidate(fetchMyCourseDataProvider);
                   },
-                  icon: Icon(Icons.refresh),
+                  icon: const Icon(Icons.refresh),
                 ),
               ],
             ),

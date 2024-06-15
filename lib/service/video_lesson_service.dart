@@ -1,8 +1,9 @@
+
 import 'package:dio/dio.dart';
 import 'package:rogonfluttertask/core/Exception/api_base_exception.dart';
-import 'package:rogonfluttertask/model/my_course_model/my_course_model.dart';
+import 'package:rogonfluttertask/model/get_lesson_video_model/get_lesson_video_model.dart';
 
-class MyCourseService {
+class VideoLessonService {
   static Dio dio = Dio(
     BaseOptions(
       baseUrl: 'https://trogon.info/tutorpro/edspark/api/',
@@ -12,18 +13,19 @@ class MyCourseService {
     ),
   );
 
-  static Future<MyCourseModel> fetchData() async {
+  static Future<GetLessonVideoModel> fetchVideo() async {
     try {
       final Response response = await dio.get(
-        'my_course',
+        'get_lesson_videos',
         queryParameters: {
+          'lesson_id': '1',
           'auth_token':
               'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJ1c2VyX2lkIjoiMiIsInJvbGVfaWQiOiIyIiwicm9sZV9sYWJlbCI6IlVzZXIiLCJwaG9uZSI6Ijk5NDY4MDExMDAifQ.BcHZkDQ_VPPQ-jnOtS4Tnwx_4GqQ9761q7BUOjPpML8'
         },
       );
 
       if (response.statusCode == 200) {
-        return MyCourseModel.fromJson(response.data);
+        return GetLessonVideoModel.fromJson(response.data);
       } else {
         throw MyApiBaseException(
             mgs: response.statusMessage ?? 'Unknown error');

@@ -1,8 +1,5 @@
-import 'dart:developer';
-
 import 'package:dio/dio.dart';
 import 'package:rogonfluttertask/core/Exception/api_base_exception.dart';
-import 'package:rogonfluttertask/model/levels_by_course/my_level_course_model/datum.dart';
 import 'package:rogonfluttertask/model/levels_by_course/my_level_course_model/my_level_course_model.dart';
 
 class LevelByCourseService {
@@ -25,7 +22,6 @@ class LevelByCourseService {
           "section_id": "1",
         },
       );
-      log(response.data.toString());
 
       if (response.statusCode == 200) {
         return MyLevelCourseModel.fromJson(response.data);
